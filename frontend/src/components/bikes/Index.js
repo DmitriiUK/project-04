@@ -9,6 +9,7 @@ class BikesIndex extends React.Component {
     super()
     this.state = {
       bikes: [],
+      brand: '',
       searchTerm: '',
       sortTerm: 'title|asc'
     }
@@ -34,8 +35,11 @@ class BikesIndex extends React.Component {
     const [field, order] = this.state.sortTerm.split('|')
 
     const filterBikes = _.filter(this.state.bikes, bike => {
-      return re.test(bike.title) || re.test(bike.year) || re.test(bike.co2emissions)
+      return re.test(bike.title) || re.test(bike.year) || re.test(bike.fuelconsumption)
     })
+
+
+
     const sortedBikes = _.orderBy(filterBikes, [field], [order])
 
     return sortedBikes
@@ -75,8 +79,8 @@ class BikesIndex extends React.Component {
               <div className="field">
                 <div className="select is-fullwidth">
                   <select onChange={this.handleChange}>
-                    <option value="co2emissions|asc">CO₂ Emissions Lowest</option>
-                    <option value="co2emissions|desc">CO₂ Emissions Highest</option>
+                    <option value="fuelconsumption|asc">Fuel Consumption Less</option>
+                    <option value="fuelconsumption|desc">Fuel Consumption More</option>
                   </select>
                 </div>
               </div>
@@ -90,10 +94,15 @@ class BikesIndex extends React.Component {
               >
                 <Link to={`/bikes/${bike.id}`}>
                   <Card
+                    brand={bike.brand.name}
                     title={bike.title}
                     year={bike.year}
                     image={bike.mainimage}
-                    co2emissions={bike.co2emissions}/>
+                    country={bike.brand.country}
+                    fuelconsumption={bike.fuelconsumption}
+                    torque={bike.torque}
+                    dryweight={bike.dryweight}
+                    seatheight={bike.seatheight}/>
                 </Link>
               </div>
             )}

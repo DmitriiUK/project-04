@@ -192,11 +192,11 @@ class BikesShow extends React.Component {
     const Brakes = () => (
       <div className="bike-open-table">
         <div className="bike-table">
-          <div className="bikedata-title">Front Brakes, Cadivper Type:</div>
+          <div className="bikedata-title">Front Brakes, Caliper Type:</div>
           <div className="bikedata-value">{this.state.bike.frontbrakes}</div>
         </div>
         <div className="bike-table">
-          <div className="bikedata-title">Rear Brakes, Cadivper Type:</div>
+          <div className="bikedata-title">Rear Brakes, Caliper Type:</div>
           <div className="bikedata-value">{this.state.bike.rearbrakes}</div>
         </div>
       </div>
@@ -266,24 +266,26 @@ class BikesShow extends React.Component {
             </Rotation>
           </div>
           <div className="bike-specs-content">
-            <div className="content-wrapper">
-              <h2 className="specs-prewiev-title">Specs</h2>
-              <div className="specs-prewiev-table">
-                <div className="specs-prewiev">
-                  <p className="specs-prewiev-name">FUEL CONSUMPTION</p>
-                  <p className="specs-prewiev-value">{this.state.bike.fuelconsumption}</p>
-                </div>
-                <div className="specs-prewiev">
-                  <p className="specs-prewiev-name">ENGINE TORQUE</p>
-                  <p className="specs-prewiev-value">{this.state.bike.torque}</p>
-                </div>
-                <div className="specs-prewiev">
-                  <p className="specs-prewiev-name">DRY WEIGHT</p>
-                  <p className="specs-prewiev-value">{this.state.bike.dryweight}</p>
-                </div>
-                <div className="specs-prewiev">
-                  <p className="specs-prewiev-name">SEAT HEIGHT</p>
-                  <p className="specs-prewiev-value">{this.state.bike.seatheight}</p>
+            <div className="specs-table-size">
+              <div className="content-wrapper">
+                <h2 className="specs-prewiev-title">Specs</h2>
+                <div className="specs-prewiev-table">
+                  <div className="specs-prewiev">
+                    <p className="specs-prewiev-name">FUEL CONSUMPTION</p>
+                    <p className="specs-prewiev-value">{this.state.bike.fuelconsumption}</p>
+                  </div>
+                  <div className="specs-prewiev">
+                    <p className="specs-prewiev-name">ENGINE TORQUE</p>
+                    <p className="specs-prewiev-value">{this.state.bike.torque}</p>
+                  </div>
+                  <div className="specs-prewiev">
+                    <p className="specs-prewiev-name">DRY WEIGHT</p>
+                    <p className="specs-prewiev-value">{this.state.bike.dryweight}</p>
+                  </div>
+                  <div className="specs-prewiev">
+                    <p className="specs-prewiev-name">SEAT HEIGHT</p>
+                    <p className="specs-prewiev-value">{this.state.bike.seatheight}</p>
+                  </div>
                 </div>
               </div>
             </div>

@@ -13,6 +13,6 @@ router.register(r'brands', BrandViewSet, base_name='brands')
 urlpatterns = [
     path('auth/', include('rest_framework.urls')),
     path(r'api/', include(router.urls)),
-    path('', include('jwt_auth.urls')),
     path('admin/', admin.site.urls),
+    path('', include('frontend.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

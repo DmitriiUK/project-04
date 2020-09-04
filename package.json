@@ -26,7 +26,7 @@
     "jsonwebtoken": "^8.5.1",
     "lazyload": "^2.0.0-rc.2",
     "lodash": "^4.17.15",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-lazyload": "^2.6.2",
